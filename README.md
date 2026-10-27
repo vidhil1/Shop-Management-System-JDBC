@@ -28,3 +28,29 @@ and stock quantities using JDBC and MySQL.
 - database.sql: Database and sample product records
 - README.md: Project documentation
 
+## JDBC Connection
+
+The application connects Java to the MySQL `shopdb` database using JDBC and MySQL Connector/J.
+
+**Connection commands:**
+
+```java
+import java.sql.*;
+
+Class.forName("com.mysql.cj.jdbc.Driver");
+
+Connection con = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/shopdb",
+    "root",
+    "your_password"
+);
+```
+
+- `Class.forName()` loads the MySQL JDBC driver.
+- `DriverManager.getConnection()` establishes the database connection.
+- `PreparedStatement` executes INSERT, UPDATE, and search queries.
+- `Statement` executes simple SELECT queries.
+- `ResultSet` retrieves the query results.
+
+**Connection flow:** Java Application → JDBC API → MySQL JDBC Driver → MySQL Database.
+
