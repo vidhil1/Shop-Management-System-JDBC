@@ -28,9 +28,3 @@ and stock quantities using JDBC and MySQL.
 - database.sql: Database and sample product records
 - README.md: Project documentation
 
-## How to Run
-1. Install Java and MySQL.
-2. Execute database.sql in MySQL.
-3. Add MySQL Connector/J to the Java project.
-4. Update the database connection credentials in Main.java.
-5. Compile and run the program.
